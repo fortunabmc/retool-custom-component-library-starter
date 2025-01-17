@@ -1,0 +1,74 @@
+{
+  "name": "retool-custom-component-library-starter",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Retool Custom Component Library Starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fortunabmc/retool-custom-component-library-starter"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kevin Hill",
+    "email": "kevin.hill@fortuanbmc.com"
+  },
+  "scripts": {
+    "build": "npx retool-ccl build",
+    "deploy": "npx retool-ccl deploy",
+    "dev": "npx retool-ccl dev",
+    "generate:options": "node ./scripts/manifest-to-markdown.mjs",
+    "prod": "npm run deploy",
+    "readme": "node ./scripts/build-readme.mjs",
+    "start": "npm run dev"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@tryretool/custom-component-support": "latest",
+    "d3": "^7.9.0",
+    "d3-org-chart": "^3.1.1",
+    "mustache": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^5.0.0",
+    "styled-components": "^6.1.14"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/d3-org-chart": "^3.1.2",
+    "@types/mustache": "^4.2.5",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.2.55",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "postcss-modules": "^6.0.0",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "retoolCustomComponentLibraryConfig": {
+    "name": "ReactOrgChart",
+    "label": "ReactOrgChart",
+    "description": "Display a heirarchy of users and managers.",
+    "entryPoint": "src/index.tsx",
+    "outputPath": "dist"
+  }
+}
